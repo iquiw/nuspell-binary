@@ -24,8 +24,8 @@ jobs:
         run: |
           mkdir build
           cd build
-          cmake .. -DCMAKE_TOOLCHAIN_FILE=c:\vcpkg\scripts\buildsystems\vcpkg.cmake -A Win32
-          cmake --build .
+          cmake .. -DCMAKE_TOOLCHAIN_FILE=c:\vcpkg\scripts\buildsystems\vcpkg.cmake -A Win64
+          cmake --build . --config Release
 
       - name: Setup tmate session
         uses: mxschmitt/action-tmate@v3
