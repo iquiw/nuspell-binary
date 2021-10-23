@@ -29,7 +29,6 @@ jobs:
           cmake --build . --config Release
           cmake --install . --prefix c:\nuspell
           cp src\tools\Release\icu*.dll c:\nuspell\bin
-          c:\nuspell\bin\nuspell.exe -h
 
       - name: Setup tmate session
         uses: mxschmitt/action-tmate@v3
