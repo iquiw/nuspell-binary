@@ -28,7 +28,7 @@ jobs:
           cmake .. -DCMAKE_TOOLCHAIN_FILE=c:\vcpkg\scripts\buildsystems\vcpkg.cmake -A Win32
           cmake --build . --config Release
           cmake --install . --prefix c:\nuspell
-          cp build\src\tools\Release\icu*.dll c:\nuspell\bin
+          cp src\tools\Release\icu*.dll c:\nuspell\bin
           c:\nuspell\bin\nuspell.exe -h
 
       - name: Setup tmate session
