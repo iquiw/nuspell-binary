@@ -22,6 +22,8 @@ jobs:
 
       - name: Build
         run: |
+          sed -i '/set_target_properties(nuspell-bin PROPERTIES/a\
+              LINK_FLAGS_RELEASE "/SUBSYSTEM:CONSOLE"' src/nuspell/CMakeLists.txt
           mkdir build
           cd build
           cmake .. -DCMAKE_TOOLCHAIN_FILE=c:\vcpkg\scripts\buildsystems\vcpkg.cmake -A Win32
