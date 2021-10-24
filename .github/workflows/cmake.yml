@@ -26,8 +26,8 @@ jobs:
           cd build
           cmake .. -DCMAKE_TOOLCHAIN_FILE=c:\vcpkg\scripts\buildsystems\vcpkg.cmake -A Win32
           cmake --build .
-          cmake --install . --prefix c:\nuspell
-          cp src\tools\Debug\icu*.dll c:\nuspell\bin
+      # cmake --install . --prefix c:\nuspell
+      # cp src\tools\Debug\icu*.dll c:\nuspell\bin
       # sed -i "/set_target_properties(nuspell-bin PROPERTIES/a\`n    LINK_FLAGS `"/SUBSYSTEM:CONSOLE`"" src/nuspell/CMakeLists.txt
       # cmake --build . --config Release
       # cp src\tools\Release\icu*.dll c:\nuspell\bin
